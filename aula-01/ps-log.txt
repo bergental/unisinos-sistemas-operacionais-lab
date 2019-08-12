@@ -1,0 +1,5 @@
+  PID TTY          TIME CMD
+ 4119 pts/0    00:00:02 bash
+17437 pts/0    00:00:00 nano
+22798 pts/0    00:00:00 less
+23290 pts/0    00:00:00 ps

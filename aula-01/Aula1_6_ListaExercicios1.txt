@@ -2,7 +2,8 @@ Lista de exercícios 1A
 
 1) Qual a função de um sistema operacional?
 Facilitar a comunicação do processos(softwares) com o hardware e criar uma intarce mais intuitiva ao usuário.
-2) Quais as camadas principais de um sistema Unix? Hardware, Kernel, shell e pedidos 
+2) Quais as camadas principais de um sistema Unix? 
+Hardware, Kernel, shell e pedidos 
 3) Cite 3 exemplos de sistemas baseados em Unix.
 Linuz, MacOS, Solaris
 4) Qual a relação entre Unix e Linux?
@@ -39,32 +40,134 @@ Next: mkfifo invocation, Prev: ln invocation, Up: Special file types
 mkdir [OPTION]... NAME...
  
 2) Qual comando apresenta os usuários logados? Dê um exemplo.
+who
+bergental :0           2019-08-11 12:29 (:0)
 
 3) Qual a diferença entre ls -1, ls -l e ls -la? Mostre um exemplo.
+ls -1 = listar um arquivo por linha. Evite '\n' com -q ou -b
+'08-GEO R2 SUPORTE[ORA-BRONZE]~1.sql'
+'2019-05-03 Analise EVF'
+Adempiere.properties
+Android
+
+ls -l = use um formato de listagem longo
+total 1696444
+-rw-r--r--  1 bergental bergental       1430 mai  3 19:11 '08-GEO R2 SUPORTE[ORA-BRONZE]~1.sql'
+drwxr-xr-x  5 bergental bergental       4096 mai  3 19:11 '2019-05-03 Analise EVF'
+-rw-rw-r--  1 bergental bergental       1909 mai 21 19:57  Adempiere.properties
+
+ls - la use um formato de listagem longo  enão ignore as entradas que começam com .
+total 1703084
+drwxr-xr-x  81 bergental bergental       4096 ago 11 12:29  .
+drwxr-xr-x   4 root      root            4096 mar  6 14:08  ..
+-rw-r--r--   1 bergental bergental       1430 mai  3 19:11 '08-GEO R2 SUPORTE[ORA-BRONZE]~1.sql'
+drwxr-xr-x   5 bergental bergental       4096 mai  3 19:11 '2019-05-03 Analise EVF'
+
 4) O que faz o df e o df -h? Exemplifique.
+df = mostra uso do espaço em disco do sistema de arquivos
+df -h = mostra uso do espaço em disco do sistema de arquivos em tamanhos de impressão em potências de 1024 (por exemplo, 1023M)  
+
 5) Apresente os comandos que criem um link simbólico e um hard link. Explique as diferenças entre eles através de um exemplo.
+ln [OPTION]... [-T] TARGET LINK_NAME   (1st form) = Criar um link na pasta que está no terminal como o nome informado no "LINK_NAME" do arquivo selecionado no "TARGET"
+ln [OPTION]... TARGET                  (2nd form) = Criar um link na pasta que está no terminal como o mesmo nome do arquivo selecionado no "TARGET"
+ln [OPTION]... TARGET... DIRECTORY     (3rd form) = Criar um link dentro da pasta informada no "DIRECTORY" como o mesmo nome do arquivo selecionado no "TARGET"
+ln [OPTION]... -t DIRECTORY TARGET...  (4th form)
+
 6) O que faz o cd ~? Exemplifique.
+muda para o diretório do usuário conectado no momento
+
 7) O que faz o pwd? Exemplifique.
+Mostra o path completo da pasta que você está no terminal
+/home/bergental/Documentos/Unisinos/2019-2/sistemas-operacionais-lab/aula-01
+
 8) Execute ls | wc -l. O que ele faz?
+Mosra o número de arquivos/pastas que tem no pasta atual
+
 9) O que faz o touch? Exemplifique.
+Atualiza data de ultima alteração de um arquivo ou pasta.
+
 10) Qual comando exibe o calendário atual?
+cal
+
 11) Apresente um comando para armazenar o calendário atual em um arquivo?
+cal >> calendario-altual.txt
+
 12) Qual comando exibe a data e o hora atual na tela?
+date
+dom ago 11 19:47:19 -03 2019
+
 13) Qual comando deve ser utilizado para alterar a senha do usuário atual?
+passwd
+
 14) Execute o date > a.txt. O que ocorre?
-15) Depois o date >> a.txt;date >> a.txt;date >> a.txt 
+cria uma arquivo a.txt com o texto abaixo
+dom ago 11 20:01:09 -03 2019
+
+15) Depois o date >> a.txt;date >> a.txt;date >> a.txt
+Adicionou mais três linhas com a informação retornada do comando date
+dom ago 11 20:01:09 -03 2019
+dom ago 11 20:02:03 -03 2019
+dom ago 11 20:02:03 -03 2019
+dom ago 11 20:02:03 -03 2019
+
 16) Escreva o comando, em uma linha que crie um arquivo de texto que armazene a data e hora atual sucedido do calendário, após exiba o conteúdo deste arquivo em tela.
+date >> date-cal.txt;cal >> date-cal.txt
+dom ago 11 22:17:52 -03 2019
+    Agosto 2019
+do se te qu qu se sá
+             1  2  3
+ 4  5  6  7  8  9 10
+_^H1_^H1 12 13 14 15 16 17
+18 19 20 21 22 23 24
+25 26 27 28 29 30 31
+
 17) Execute os comandos cat a.txt | sort - r | less
+dom ago 11 20:02:03 -03 2019
+dom ago 11 20:02:03 -03 2019
+dom ago 11 20:02:03 -03 2019
+dom ago 11 20:01:09 -03 2019
+
 18) Renomeie o arquivo criado.
+mv date-cal.txt date-cal-rename.txt
+
 19) Crie uma subpasta.
+mkdir subfolder
+
 20) Copie o arquivo para a subpasta.
+cp date-cal-rename.txt subfolder
+
 21) Remova o arquivo original.
+rm date-cal-rename.txt
+
 22) Grave em arquivo o log do conjunto de processos em execução no momento.
+cat ps-log.txt
+
 23) O que faz o comando cd . ; pwd?
+navega para a pasta atual(não muda o diretório) e depois mostra o path(caminho) de onde está.
+/home/bergental/Documentos/Unisinos/2019-2/sistemas-operacionais-lab/aula-01
+
 24) O que faz o comando cd .. ; pwd?
+vontal uma pasta no diretório e depois mostra o path(caminho) de onde está.
+/home/bergental/Documentos/Unisinos/2019-2/sistemas-operacionais-lab
+
 25) O que faz o comando echo /dev/sd[ab]*?
+mostra todos arquivos e pastas que estão dentro de /dev/ que começam com sd que tenham a ou b 
+em seguida e que tenha qualquer caracter nos seguintes.
+
 26) Execute mkdir teste. Execute agora o mv teste test. O que ele faz?
+mkdir teste cria uma pasta com o nome teste, mv teste test altera o nome da pasta teste para test
+
 27) Qual comando para ver o uso da memória RAM? Como exibir em GB?
+free, pra ver em GB free -g
+              total       usada       livre    compart.  buff/cache  disponível
+Mem.:             7           4           0           0           2           2
+Swap:             1           0           1
+
 28) Qual comando para desligar o sistema?
+shutdown -h, também terial o halt
+
 29) Cite 3 shells diferentes.
+Bourne Shell, Bash, Korn Shell
+
 30) Existe algo análogo a shell script fora do Unix?
+Teria o cmd que seria o prompt de commands

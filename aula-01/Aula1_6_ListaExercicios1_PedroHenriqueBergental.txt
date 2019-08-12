@@ -1,3 +1,4 @@
+Nome: Pedro Henrique Bergental
 Lista de exercícios 1A
 
 1) Qual a função de um sistema operacional?

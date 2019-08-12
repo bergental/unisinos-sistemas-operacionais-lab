@@ -1,0 +1,27 @@
+Lista de exerc�cios 1 - Resolu��o
+
+1) Qual a fun��o de um sistema operacional?
+O SO tem como principal fun��o gerenciar a camada de hardware do computador, abstraindo do
+usu�rio esta complexidade. Fornece ainda base para os programas aplicativos e atua como
+intermedi�rio entre o usu�rio e hardware do computador (mem�ria, disco, E/S, rede, etc).
+
+2) Quais as camadas principais de um sistema Unix?
+Kernel / m�dulos que fazem a interface com o hardware.
+Chamadas de sistema / biblioteca que oferecem rotinas padronizadas.
+Interpretador de comandos que possibiita a entrada de comandos por parte do usu�rio e outros
+programas.
+
+3) Cite 3 exemplos de sistemas baseados em Unix.
+Solaris, Minix, Linux.
+
+4) Qual a rela��o entre Unix e Linux?
+O Linux foi desenvolvido baseando-se no Unix, originalmente.
+O Kernel do Linux foi desenvolvido incialmente em 1991 por Linus Torvalds.
+
+5) Cite 3 distribui��es Linux.
+Ubuntu, Mint e Debian.
+
+6) O que faz o kernel do sistema operacional?
+� o n�cleo do SO. Mant�m as abstra��es importantes e essenciais do sistema operacional.
+Possui acesso completo aos recursos f�sicos do computador.
+

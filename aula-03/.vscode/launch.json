@@ -1,0 +1,22 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - Exerc8",
+            "request": "launch",
+            "mainClass": "Exerc8"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - FichaDeAluno",
+            "request": "launch",
+            "mainClass": "FichaDeAluno"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - Exerc7",
+            "request": "launch",
+            "mainClass": "Exerc7"
+        }
+    ]
+}

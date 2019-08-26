@@ -22,7 +22,13 @@ void imprime_bytes_hex(int num) {
  char c[10] = {};
  sprintf(c, "%d", num);
  for(int i = sizeof(c); i >= 0; --i) {
-  printf("%x\n", to_int(c[i]));
+     if(c[i] != '\0') {
+        /*int a = c[i] - '0';
+        char hex[5];
+        sprintf(hex, "%x", a);
+        printf("%d:%s\n", a, hex);*/
+        printf("%c:%x\n", c[i], to_int(c[i]));
+     }
  }
 }
 

@@ -1,0 +1,5 @@
+Classe em Java é um conjunto de objetos com características comuns. Uma classe 
+é como um modelo para a criação de objetos, que tem as mesmas características 
+da classe à qual pertence.
+Struct é uma variável especial que contém diversas outras variáveis normalmente 
+de tipos diferentes. Podendo se dizer que seria uma variavel estruturada.

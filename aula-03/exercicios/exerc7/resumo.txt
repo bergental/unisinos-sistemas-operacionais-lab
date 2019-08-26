@@ -1,0 +1,7 @@
+String em Java é uma classe que contem um atributo onde armazena uma sequencia de char 
+e que possui methods para transformar esse atributo e retorar valores sobre ele, podendo
+ter chamadas staticas, por exemplo String.valueOf(obj) para converter qualquer atributo 
+para uma String.
+string em C pelo o que encontrei poderia ser o string.h que é uma biblioteca de funcões(methods) 
+para agilizar atulização dos char[], e pelo que vimos em aula poderia se dizer que string é o 
+array de char (char a[]).

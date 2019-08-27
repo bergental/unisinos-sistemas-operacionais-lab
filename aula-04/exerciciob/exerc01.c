@@ -19,8 +19,9 @@ int main(int argc, char *argv[]){
 	} else if (p == 0) {	 				/* processo filho */
 		printf("Iniciando a execução do filho... \n"); 
 		printf("Sou o filho - PPID = %d PID = %d \n", getppid(), getpid());
-		printf("PID do filho (no filho): %d \n", p);						
-		execlp("firefox", "firefox", "--new-window http://www.google.com", NULL);			/* atribui novo programa ao filho */
+		printf("PID do filho (no filho): %d \n", p);
+		char params[] = {"firefox","--new-window","http://www.google.com"};					
+		execv("firefox", params);			/* atribui novo programa ao filho */
 	} else { 						/* processo pai */
 		printf("Pai aguardando o filho terminar... \n"); 
 		printf("Sou o pai - PPID = %d PID = %d \n", getppid(), getpid());

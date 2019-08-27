@@ -1,0 +1,14 @@
+Lista de exercícios 4b
+
+1) Crie uma função load_firefox() a qual recebe como parâmetro um string representando uma URL e carrega o programa firefox dentro de um novo processo atual, exibindo aquela URL. Sabe-se que o programa firefox encontra-se no PATH do sistema, e que deve ser chamado com dois parâmetros de
+linha de comando, o primeiro sendo o string fixo "--new-window" e o segundo a URL a ser exibida.
+
+2) Teste o programa desenvolvido, criando um main() que chama a função definida anteriormente com uma URL fixa e observando as diferenças de comportamento do programa em duas situações particulares:
+a. quando já existe um processo do firefox no inicio do teste; e
+b. quando nenhum processo do firefox estava executando previamente.
+Dica: Observe a hierarquia de processos através dos comandos ps ajxf e pstree em outro terminal.
+
+3) Crie uma função start_browser() a qual recebe como parâmetro um string representando uma URL, dispara uma nova janela do firefox para exibir a URL indicada (chamando a função load_firefox() previamente construída), sem que o programa atualmente em execução seja perdido (substituído).
+
+4) Modifique o programa anterior para que ele dispare novas janelas do navegador para cada uma das URLs recebidas como parâmetro de linha de comando.
+

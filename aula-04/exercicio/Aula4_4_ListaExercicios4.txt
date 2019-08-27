@@ -1,0 +1,15 @@
+Lista de exercícios 4
+
+1) Crie um programa em C que leia um número inteiro N entrada padrão e receba, como único argumento de linha de comando (não esqueça de validar isso) uma palavra W. O programa deve então escrever na saída padrão a palavra W, N vezes, apresentando a cada vez o número da iteração, e apresentando a palavra W entre aspas simples. Ex.: 
+#1 'palavra' 
+#2 'palavra'
+
+2) Modifique o programa anterior de forma que da impressão proposta seja realizada por uma função repete(), a qual recebe dois parâmetros: a palavra a ser repetida e o número de repetições. A função definida deverá ser chamada a partir da função main() com os parâmetros apropriados.
+
+3) Modifique o programa anterior de forma que a chamada a repete() seja executada em um processo filho. Modique, ainda, a função repete() para que em cada linha impressa seja também apresentado o PID do processo corrente e de seu pai. Com relação ao processo pai, este deve ao término de sua execução imprimir a mensagem "pai terminou", seguida de seu PID e do PID de seu pai.
+
+4) Altere a função repete() para que, entre cada impressão, o filho durma 1s.
+
+5) Modifique o programa anterior de forma que o processo pai, antes de concluir sua execução, aguarde o término do filho e recupere seu status de terminação e, então, determine se o filho concluiu sua execução com sucesso ou falha.
+
+6) Modifique a função repete() para que o processo seja abortado com status de terminação indicativo de falha, se o número de repetições solicitado for negativo ou maior que 10.

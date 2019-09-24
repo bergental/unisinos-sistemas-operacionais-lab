@@ -1,0 +1,14 @@
+Lista de exercícios 2
+
+1) Crie um programa em shell script denominado dir_monitor.sh. Esse programa deve receber um caminho para diretório através da variável de ambiente MON_DIR e validar que essa informação realmente refere-se a um diretório existente no sistema de arquivos. Em caso negativo, o script deve abortar sua execução com status indicativo de erro e mensagem apropriada enviada para /dev/stderr .
+
+2) Atualizar o script de forma que ele exiba a informação atualizada sobre arquivos da pasta especificada em MON_DIR a cada 2 segundos. Os arquivos de backup devem ser omitidos da listagem.
+
+3) Atualize o script de forma que ele receba como parâmetros posicionais um nome de outro comando e seus respectivos parâmetros. (ex.:dir_monitor.sh  algum_comando param1 param2 param3)
+O script deve então monitorar silenciosamente a pasta indicada em MON_DIR, verificando o conteúdo da pasta a cada 2 segundos. Sempre que for percebida uma alteração no conteúdo da pasta em relação a verificação imediatamente anterior, deverá ser disparado um novo processo em background, o qual executará o comando recebido através dos parâmetros posicionais do script.
+
+4) Atualize o script para que o comportamento de disparar o comando em background para uma detecção de alteração na pasta seja executado no máximo 5 vezes. Quando esse limite for atingido, o script deve finalizar sua própria execução com status 5.
+
+5) Reorganize o script anterior para que utilize funções. 
+
+Enviar 5 arquivos .sh com as respostas, separadamente por item.

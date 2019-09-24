@@ -1,0 +1,66 @@
+Lista de exercícios 6 - SIMULADO PRÉ-PROVA
+
+Questão 1) [2 pontos]
+Crie um programa em shell script denominado canivete_suico.sh. 
+Este programa deve exibir um menu com 5 opções para o usuário escolher, conforme modelo abaixo.
+Deve ser validada a entrada (valores válidos entre 1 e 5).
+Caso seja selecionada a opção 5 (Sair). O script deve ser encerado com status de terminação válido.
+
+************* CANIVETE SUICO *************
+
+1 - Calculadora
+2 - Análise de texto
+3 - Automação de operações
+4 - Gestão de processos
+5 - Sair
+
+******************************************
+
+Digite a opção desejada: __
+
+******************************************
+
+Questão 2) [2 pontos]
+1 - Calculadora 
+
+O script deve abrir em primeiro plano um programa em C que realize as 4 operações aritméticas: 
+A - Soma
+B - Subtração
+C - Produto
+D - Divisão
+S - Sair
+
+O programa deve solicitar pela entrada padrão a operação a ser realizada (A, B, C ou D) e os 2 valores a serem calculados. 
+Deve implementar uma função para cada operação.
+Deve exibir o resultado da operação. 
+Deve realizar a saída com status de terminaçao de sucesso (Opção S do menu).
+
+Questão 3) [2 pontos]
+2 - Análise de texto
+
+O script deve abrir um programa em C que receba uma palavra por linha de comando (via script). 
+O programa deve implementar tratamento de sinal (pelo menos SIGUSR1, SIGUSR2 e SIGINT. 
+Ao iniciar deve exibir a mensagem informando o PID do processo, a palavra recebida e requisitar ao usuário que envie um sinal. 
+Caso o sinal recebido seja SIGUSR1, o programa deve ler quantas vogais existem na palavra informada e exibir na saída padrão.
+Caso o sinal recebido seja SIGUSR2, o programa deve ler quantos dígitos existem na palavra informada e exibir na saída padrão. 
+Caso o sinal recebido seja SIGINT, o programa deve ignorar, não encerrar e solicitar que o usuário envie um SIGTERM caso deseje encerrar a aplicação. 
+
+Questão 4) [2 pontos]
+3 - Automação de operações
+
+O script deve abrir em primeiro plano um programa em C que receba por linha de comando 3 parâmetros (exemplo: ./programa ls date cal).
+Deve ser criado um processo executando-os na sequência inversa, com intervalo de 5 segundos entre cada um. 
+Ao final deve emitir uma mensagem de agradecimento com a data e hora atual. 
+Observação: Pode ser utilizada a função System.
+
+Questão 5) [2 pontos]
+4 - Gestão de processos
+
+O script deve abrir um programa em C que deve criar um processo filho recebe pela entrada padrão um valor inteiro.
+O programa do processo filho deve verificar se o valor digitado for maior ou igual a zero e menor ou igual a 10, o status de terminação será 0 (sucesso).
+Caso o valor seja negativo ou maior que 10, o status de terminação será 10 (insucesso).
+O pai deve esperar a execução do filho, antes de encerrar. 
+Devem ser informados os PIDs do pai e do filho em ambos os processos. 
+Se ocorrer falha no retorno do filho (status de terminação de insucesso), deve ser tratada e exibida uma mensagem de falha apropriada. 
+
+Enviar os arquivos .sh e .c, zipados.

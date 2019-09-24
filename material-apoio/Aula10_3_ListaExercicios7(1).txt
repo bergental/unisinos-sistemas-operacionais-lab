@@ -1,0 +1,9 @@
+Lista de exercícios 7
+
+1) Alterar exemplo 1 (ex1.c) informando o id da thread chamadora (pai) e da thread criada (filha), para cada thread gerada.
+
+2) Alterar o exemplo2 (ex2.c) de modo que o programa receba 2 valores por linha de comando. Executar em 4 threads distintas as operações aritméticas de soma, subtração, divisão e mutiplicação. Implementar o tratamento para exibir o resultado das 4 operações ao final. Imprimir os resultados na ordem inversa das chamadas e a somatória dos valores retornados.
+
+3) Apresente um exemplo de uso do comando od do unix.
+
+4) Apresente um exemplo de uso do comando strace do unix.

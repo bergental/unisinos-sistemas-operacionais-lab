@@ -1,0 +1,7 @@
+Conforme observa pela execução do Ex1, com wait:
+
+a. quando já existe um processo do firefox no inicio do teste;
+O Sistema Operacional aloca na estrutura hereditária dos processos o novo processo filho para o firefox.
+
+b. quando nenhum processo do firefox estava executando previamente.
+O Sistema Operacional aloca na estrutura hereditária do Ex1, mantendo o Ex1 como pai.

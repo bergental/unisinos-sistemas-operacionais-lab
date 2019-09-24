@@ -1,0 +1,41 @@
+Lista de exercícios 1A
+
+1) Qual a função de um sistema operacional?
+2) Quais as camadas principais de um sistema Unix?
+3) Cite 3 exemplos de sistemas baseados em Unix.
+4) Qual a relação entre Unix e Linux?
+5) Cite 3 distribuições Linux.
+6) O que faz o kernel do sistema operacional?
+
+Lista de exercícios 1B
+Explique detalhadamente o efeito de cada um dos comandos apresentados a seguir:
+1) Qual a diferença entre man e info? Dê um exemplo.
+2) Qual comando apresenta os usuários logados? Dê um exemplo.
+3) Qual a diferença entre ls -1, ls -l e ls -la? Mostre um exemplo.
+4) O que faz o df e o df -h? Exemplifique.
+5) Apresente os comandos que criem um link simbólico e um hard link. Explique as diferenças entre eles através de um exemplo.
+6) O que faz o cd ~? Exemplifique.
+7) O que faz o pwd? Exemplifique.
+8) Execute ls | wc -l. O que ele faz?
+9) O que faz o touch? Exemplifique.
+10) Qual comando exibe o calendário atual?
+11) Apresente um comando para armazenar o calendário atual em um arquivo?
+12) Qual comando exibe a data e o hora atual na tela?
+13) Qual comando deve ser utilizado para alterar a senha do usuário atual?
+14) Execute o date > a.txt. O que ocorre?
+15) Depois o date >> a.txt;date >> a.txt;date >> a.txt 
+16) Escreva o comando, em uma linha que crie um arquivo de texto que armazene a data e hora atual sucedido do calendário, após exiba o conteúdo deste arquivo em tela.
+17) Execute os comandos cat a.txt | sort - r | less
+18) Renomeie o arquivo criado.
+19) Crie uma subpasta.
+20) Copie o arquivo para a subpasta.
+21) Remova o arquivo original.
+22) Grave em arquivo o log do conjunto de processos em execução no momento.
+23) O que faz o comando cd . ; pwd?
+24) O que faz o comando cd .. ; pwd?
+25) O que faz o comando echo /dev/sd[ab]*?
+26) Execute mkdir teste. Execute agora o mv teste test. O que ele faz?
+27) Qual comando para ver o uso da memória RAM? Como exibir em GB?
+28) Qual comando para desligar o sistema?
+29) Cite 3 shells diferentes.
+30) Existe algo análogo a shell script fora do Unix?

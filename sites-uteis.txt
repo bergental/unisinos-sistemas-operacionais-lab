@@ -1,0 +1,13 @@
+http://linguagemc.com.br/a-biblioteca-string-h/
+
+http://linguagemc.com.br/a-biblioteca-math-h/
+
+http://linguagemc.com.br/lista-de-palavras-reservadas-em-c/
+
+http://linguagemc.com.br/funcoes-em-c/
+
+http://www.inf.ufpr.br/cursos/ci067/Docs/NotasAula/notas-11_Fun_c_coes.html
+
+http://www.inf.ufpr.br/cursos/ci067/Docs/NotasAula/
+
+http://www.inf.ufpr.br/cursos/ci067/Docs/NotasAula/notas-1_Programa_c_cao_Basica_em_.html

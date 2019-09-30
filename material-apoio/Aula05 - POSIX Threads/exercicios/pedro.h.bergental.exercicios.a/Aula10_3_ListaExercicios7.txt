@@ -1,0 +1,119 @@
+Lista de exercícios 7
+
+1) Alterar exemplo 1 (ex1.c) informando o id da thread chamadora (pai) e da thread criada (filha), para cada thread gerada.
+
+2) Alterar o exemplo2 (ex2.c) de modo que o programa receba 2 valores por linha de comando. Executar em 4 threads distintas as operações aritméticas de soma, subtração, divisão e mutiplicação. Implementar o tratamento para exibir o resultado das 4 operações ao final. Imprimir os resultados na ordem inversa das chamadas e a somatória dos valores retornados.
+
+3) Apresente um exemplo de uso do comando od do unix.
+O comando od grava uma representação inequívoca, usando bytes octais por padrão, de FILE na saída padrão.
+
+lab@lab:~/Workspace/sistemas-operacionais/aula-05/exercicios.a$ echo "pedro henrique"
+pedro henrique
+lab@lab:~/Workspace/sistemas-operacionais/aula-05/exercicios.a$ echo "pedro henrique" >> file.txt
+lab@lab:~/Workspace/sistemas-operacionais/aula-05/exercicios.a$ od -b file.txt
+0000000 160 145 144 162 157 040 150 145 156 162 151 161 165 145 012
+0000017
+lab@lab:~/Workspace/sistemas-operacionais/aula-05/exercicios.a$ od -Ax -c file.txt
+000000   p   e   d   r   o       h   e   n   r   i   q   u   e  \n
+00000f
+
+4) Apresente um exemplo de uso do comando strace do unix.
+strace é um utilitário de diagnóstico, depuração e de instrução do espaço de usuário para Linux. Ele é usado para monitorar e interferir com interações entre processos e o núcleo do Linux, que incluem chamadas do sistema, entregas de sinais e mudanças no estado do processo. A operação do strace é possibilitada pelo recurso do núcleo conhecido como ptrace.
+
+lab@lab:~/Workspace/sistemas-operacionais/aula-05/exercicios.a$ strace ls
+execve("/bin/ls", ["ls"], [/* 68 vars */]) = 0
+brk(NULL)                               = 0x8721000
+access("/etc/ld.so.nohwcap", F_OK)      = -1 ENOENT (No such file or directory)
+mmap2(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0xb7766000
+access("/etc/ld.so.preload", R_OK)      = -1 ENOENT (No such file or directory)
+open("/etc/ld.so.cache", O_RDONLY|O_CLOEXEC) = 3
+fstat64(3, {st_mode=S_IFREG|0644, st_size=87192, ...}) = 0
+mmap2(NULL, 87192, PROT_READ, MAP_PRIVATE, 3, 0) = 0xb7750000
+close(3)                                = 0
+access("/etc/ld.so.nohwcap", F_OK)      = -1 ENOENT (No such file or directory)
+open("/lib/i386-linux-gnu/libselinux.so.1", O_RDONLY|O_CLOEXEC) = 3
+read(3, "\177ELF\1\1\1\0\0\0\0\0\0\0\0\0\3\0\3\0\1\0\0\0\240F\0\0004\0\0\0"..., 512) = 512
+fstat64(3, {st_mode=S_IFREG|0644, st_size=145384, ...}) = 0
+mmap2(NULL, 154580, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0xb772a000
+mprotect(0xb774c000, 4096, PROT_NONE)   = 0
+mmap2(0xb774d000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x22000) = 0xb774d000
+mmap2(0xb774f000, 3028, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0xb774f000
+close(3)                                = 0
+access("/etc/ld.so.nohwcap", F_OK)      = -1 ENOENT (No such file or directory)
+open("/lib/i386-linux-gnu/libc.so.6", O_RDONLY|O_CLOEXEC) = 3
+read(3, "\177ELF\1\1\1\3\0\0\0\0\0\0\0\0\3\0\3\0\1\0\0\0\320\207\1\0004\0\0\0"..., 512) = 512
+fstat64(3, {st_mode=S_IFREG|0755, st_size=1786484, ...}) = 0
+mmap2(NULL, 1792540, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0xb7574000
+mmap2(0xb7724000, 12288, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x1af000) = 0xb7724000
+mmap2(0xb7727000, 10780, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0xb7727000
+close(3)                                = 0
+access("/etc/ld.so.nohwcap", F_OK)      = -1 ENOENT (No such file or directory)
+open("/lib/i386-linux-gnu/libpcre.so.3", O_RDONLY|O_CLOEXEC) = 3
+read(3, "\177ELF\1\1\1\0\0\0\0\0\0\0\0\0\3\0\3\0\1\0\0\0\220\16\0\0004\0\0\0"..., 512) = 512
+fstat64(3, {st_mode=S_IFREG|0644, st_size=472368, ...}) = 0
+mmap2(NULL, 475320, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0xb74ff000
+mmap2(0xb7572000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x72000) = 0xb7572000
+close(3)                                = 0
+access("/etc/ld.so.nohwcap", F_OK)      = -1 ENOENT (No such file or directory)
+open("/lib/i386-linux-gnu/libdl.so.2", O_RDONLY|O_CLOEXEC) = 3
+read(3, "\177ELF\1\1\1\0\0\0\0\0\0\0\0\0\3\0\3\0\1\0\0\0000\n\0\0004\0\0\0"..., 512) = 512
+fstat64(3, {st_mode=S_IFREG|0644, st_size=13828, ...}) = 0
+mmap2(NULL, 16488, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0xb74fa000
+mmap2(0xb74fd000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x2000) = 0xb74fd000
+close(3)                                = 0
+access("/etc/ld.so.nohwcap", F_OK)      = -1 ENOENT (No such file or directory)
+open("/lib/i386-linux-gnu/libpthread.so.0", O_RDONLY|O_CLOEXEC) = 3
+read(3, "\177ELF\1\1\1\0\0\0\0\0\0\0\0\0\3\0\3\0\1\0\0\0\260O\0\0004\0\0\0"..., 512) = 512
+fstat64(3, {st_mode=S_IFREG|0755, st_size=134864, ...}) = 0
+mmap2(NULL, 115296, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0xb74dd000
+mmap2(0xb74f6000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x18000) = 0xb74f6000
+mmap2(0xb74f8000, 4704, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0xb74f8000
+close(3)                                = 0
+mmap2(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0xb74dc000
+mmap2(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0xb74db000
+set_thread_area({entry_number:-1, base_addr:0xb74db740, limit:1048575, seg_32bit:1, contents:0, read_exec_only:0, limit_in_pages:1, seg_not_present:0, useable:1}) = 0 (entry_number:6)
+mprotect(0xb7724000, 8192, PROT_READ)   = 0
+mprotect(0xb74f6000, 4096, PROT_READ)   = 0
+mprotect(0xb74fd000, 4096, PROT_READ)   = 0
+mprotect(0xb7572000, 4096, PROT_READ)   = 0
+mprotect(0xb774d000, 4096, PROT_READ)   = 0
+mprotect(0x8067000, 4096, PROT_READ)    = 0
+mprotect(0xb778e000, 4096, PROT_READ)   = 0
+munmap(0xb7750000, 87192)               = 0
+set_tid_address(0xb74db7a8)             = 4484
+set_robust_list(0xb74db7b0, 12)         = 0
+rt_sigaction(SIGRTMIN, {0xb74e19c0, [], SA_SIGINFO}, NULL, 8) = 0
+rt_sigaction(SIGRT_1, {0xb74e1a40, [], SA_RESTART|SA_SIGINFO}, NULL, 8) = 0
+rt_sigprocmask(SIG_UNBLOCK, [RTMIN RT_1], NULL, 8) = 0
+ugetrlimit(RLIMIT_STACK, {rlim_cur=8192*1024, rlim_max=RLIM_INFINITY}) = 0
+uname({sysname="Linux", nodename="lab", ...}) = 0
+statfs64("/sys/fs/selinux", 84, 0xbf987378) = -1 ENOENT (No such file or directory)
+statfs64("/selinux", 84, 0xbf987378)    = -1 ENOENT (No such file or directory)
+brk(NULL)                               = 0x8721000
+brk(0x8742000)                          = 0x8742000
+open("/proc/filesystems", O_RDONLY|O_LARGEFILE) = 3
+fstat64(3, {st_mode=S_IFREG|0444, st_size=0, ...}) = 0
+read(3, "nodev\tsysfs\nnodev\trootfs\nnodev\tr"..., 1024) = 362
+read(3, "", 1024)                       = 0
+close(3)                                = 0
+open("/usr/lib/locale/locale-archive", O_RDONLY|O_LARGEFILE|O_CLOEXEC) = 3
+fstat64(3, {st_mode=S_IFREG|0644, st_size=2989520, ...}) = 0
+mmap2(NULL, 2097152, PROT_READ, MAP_PRIVATE, 3, 0) = 0xb72db000
+mmap2(NULL, 4096, PROT_READ, MAP_PRIVATE, 3, 0x2d8000) = 0xb7765000
+close(3)                                = 0
+ioctl(1, TCGETS, {B38400 opost isig icanon echo ...}) = 0
+ioctl(1, TIOCGWINSZ, {ws_row=38, ws_col=142, ws_xpixel=0, ws_ypixel=0}) = 0
+open(".", O_RDONLY|O_NONBLOCK|O_LARGEFILE|O_DIRECTORY|O_CLOEXEC) = 3
+fstat64(3, {st_mode=S_IFDIR|0775, st_size=4096, ...}) = 0
+getdents64(3, /* 8 entries */, 32768)   = 264
+getdents64(3, /* 0 entries */, 32768)   = 0
+close(3)                                = 0
+fstat64(1, {st_mode=S_IFCHR|0620, st_rdev=makedev(136, 17), ...}) = 0
+write(1, "Aula10_3_ListaExercicios7.txt  e"..., 76Aula10_3_ListaExercicios7.txt  exerc1  exerc1.c  exerc2  exerc2.c  file.txt
+) = 76
+close(1)                                = 0
+close(2)                                = 0
+exit_group(0)                           = ?
++++ exited with 0 +++
+
+

@@ -1,0 +1,25 @@
+Lista de exercícios 4
+
+1) Crie um programa em C que imprima na tela:
+O string "Olá Mundo" seguindo de uma quebra de linha;
+O número 3.141581 com 3 casas decimais;
+
+2) Crie um programa em C que imprima, individualmente, cada um dos caracteres, um por linha, de uma string lida da entrada padrão (max 128 caracteres)
+
+3) Crie uma função imprime_caracteres() que recebe um string C como parâmetro e realize o procedimento da etapa anterior.
+
+4) Crie uma função imprime_bytes_dec() que imprima o valor numérico (em notação decimal) de cada um dos caracteres de uma string recebida como parâmetro.
+
+5) Crie uma função imprime_bytes_hex() que imprima o valor numérico, em notação hexadecimal, de cada um dos bytes que formam um inteiro recebido como parâmetro, iniciando pelo byte menos significativo.
+
+6) Crie uma função imprime_bytes_bin() que imprima o valor numérico, em notação binária, de cada um dos bytes que forma um inteiro longo recebido como parâmetro, iniciando pelo byte menos significativo.
+
+7) Estude as diferenças e compare o uso de um String Java e um string C. Apresente 1 exemplo.
+
+8) Estude as diferenças e compare uma classe Java e uma struct C. Apresente 1 exemplo.
+
+9) Estude e compare as diferenças entre arrays em Java e em C. Apresente 1 exemplo.
+
+10) Implemente um Shell Script que utilize um programa em C, desenvolvido por vocês. O programa em C deve receber um valor por parâmetro, oriundo da entrada parametrizada do script. Se o parâmetro for 1, a saída do programa C deverá informar qual % de memória livre e se o parâmetro for 2, qual % memória usada do computador.
+
+Enviar zip com os fontes das resoluções.

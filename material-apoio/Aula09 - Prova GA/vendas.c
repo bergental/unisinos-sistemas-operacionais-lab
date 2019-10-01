@@ -13,21 +13,21 @@ float custoTotal(int qtd, float preco) {
 6.4 - O valor de margem de contribui��o � XX,XX (calcular 50% sobre o valor de custo total).
 [Exemplo: O valor de margem de contribui��o � R$ 50,00]
  */
-float margemDeContribuicao(float custoTotal) {
-    return custoTotal * 0.5;
+float margemDeContribuicao(float cTotal) {
+    return cTotal * 0.5;
 }
 /*
 6.5 - O valor do ICMS para o produto � R$ XX,XX (calcular 17% sobre o valor de custo total + margem de contribui��o).
 [Exemplo: O valor do ICMS para o produto �: R$ 25,50] */
-float ICMS(float custoTotal, float margemDeContribuicao) {
-    return (custoTotal + margemDeContribuicao) * 0.17;
+float ICMS(float cTotal, float mDeContribuicao) {
+    return (cTotal + mDeContribuicao) * 0.17;
 }
 /*
 6.6 - O valor de venda do produto � R$ XX,XX (somat�ria dos valores 6.3, 6.4 e 6.5).
 [Exemplo: O valor de venda do produto � R$ 175,50].
  */
-float valorDeVenda(float custoTotal, float margemDeContribuicao, float ICMS) {
-    return custoTotal + margemDeContribuicao + ICMS;
+float valorDeVenda(float cTotal, float mDeContribuicao, float icms) {
+    return cTotal + mDeContribuicao + icms;
 }
 
 void buscarValores() {
@@ -44,7 +44,7 @@ void buscarValores() {
 
     float ct = custoTotal(qty, price);
     float mdc = margemDeContribuicao(ct);
-    float 
+    float icms = ICMS()
 
     
 }

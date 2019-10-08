@@ -1,0 +1,16 @@
+﻿1) 
+Implemente um programa em C (utilizar a API de fila de mensagens) que gerencie uma 
+fila de despacho de mercadorias de uma empresa logística.
+
+Devem haver 2 processos, um para o despacho (servidor) e outro para o despachante (cliente).
+
+Pode haver mais de um despachante simultaneamente.
+
+Cada produto a ser despachado possui um id, um peso e um valor.
+
+O processo servidor deve processar os volumes pela ordem de chegada e deve acumular o peso e 
+valor total despachado, exibindo o histórico de despachos e os valores acumulados a cada novo despacho.
+
+Deve ser estabelecido um protocolo para encerramento da fila (unlink). Um produto com código, peso e 
+valor que sejam de finalização.
+

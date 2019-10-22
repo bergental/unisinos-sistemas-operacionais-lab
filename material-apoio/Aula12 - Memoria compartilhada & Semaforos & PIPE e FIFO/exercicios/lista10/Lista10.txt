@@ -1,0 +1,25 @@
+Lista de exercícios 10
+
+Implemente um programa em C que deve gerenciar pousos e decolagens em um aeroporto.
+
+Implementar o controladorvoo.c que é responsável por liberar ou bloquear o uso do espaço aéreo.
+Este programa deve, via compartilhamento de memória, informar se o espaço aéreo está:
+* 0 - totalmente aberto
+* 1 - aberto para decolagens
+* 2 - aberto para pousos
+* 3 - fechado
+* 4 - encerrar operações
+
+Implementar o operador.c que é o responsável por permitir ou restringir os pousos e decolagens.
+Este programa deve, via compartilhamento de memória, comunicar-se com o controladorvoo.c, para 
+verificar as possibilidades de autorização. 
+Utilizar semáforos para controlar o sincronismo entre os pousos e decolagens.
+Criar uma thread para cada funcionalidade: pouso e decolagem.
+Cada pouso demora 10 segundos neste simulador. 
+Cada decolagem demora 20 segundos neste simulador.
+
+O operador.c deve permanecer aberto, verificando de modo iterativo, a mudança da permissão de uso 
+do espaço aéreo até que o código da mensagem seja para encerramento da operação. Neste casom todos 
+os recursos devem ser corretamente encerrados e desalocados.
+
+Os programas devem informar todas as etapas do fluxo na saída padrão, devido a recomendações da ANAC.

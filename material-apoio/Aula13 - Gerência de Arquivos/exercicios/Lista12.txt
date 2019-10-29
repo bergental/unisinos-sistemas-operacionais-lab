@@ -1,0 +1,16 @@
+Lista de exercícios 12
+
+1) Implementar um programa que receba pela entrada padrão o nome de um arquivo. 
+Verificar se ele existe, caso afirmativo, exibir seu conteúdo e tamanho. 
+Caso não exista, solicitar um texto adicional a ser digitado e gravado no novo arquivo criado.
+
+2) Desenvolva um programa que agregue ao exercício 1, o contador do número de linhas do arquivo.
+
+3) Desenvolva um programa que agregue ao exercício 2, o contador de espaços.
+
+4) Desenvolva um programa que agregue ao exercício 3, o contador de vogais.
+
+5) Implementar um programa que receba por parâmetro o nome de 2 arquivos.
+Exemplo ./programa arquivo1.txt arquivo2.txt
+Verificar se o primeiro existe, caso afirmativo, criar o arquivo2 copiando os registros do arquivo1, 
+descartando espaços e quebras de linha.

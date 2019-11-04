@@ -2,34 +2,55 @@
 #include <stdlib.h>
 #include <string.h>
 #include <fcntl.h>
+#include <sys/mman.h>
 #include <sys/stat.h>
+#include <sys/types.h>
+#include <sys/wait.h>
 #include <mqueue.h>
+#include <unistd.h>
 
 enum MensagemTipo {
 	ENTRAR = 0,
 	ENTROU = 1,
-	CHEIO = 2,
-	NOME_JA_USADO = 3
+	NOME_JA_USADO = 2
+};
+
+enum SalaStatus {
+	VAZIA = 0,
+	AGUARDANDO_JOGADOR = 1,
+	CHEIA = 2,
+	FECHADA = 3
 };
 
 //Nome da fila
 const char* NOME_FILA_JOGADOR1 = "/jogador1";
 const char* NOME_FILA_JOGADOR2 = "/jogador2";
-char* NOME_FILA_SERVER = "/server";
+const char* NOME_FILA_SERVER = "/server";
+const char* CHAVE_SALA = "/sala";
 
+// Fila de Mensagem
 typedef struct Jogador {
 	int jogadorId;
 	char nome[30];
 	int ganhador;
 } TJogador;
 
+// Memoria compartilhada
+typedef struct Sala {
+	TJogador jogador1;
+	TJogador jogador2;
+	enum SalaStatus status;
+} TSala;
+
+// Fila de Mensagem
 typedef struct Mensagem {
 	int jogadorId;//jogadorId = 0 SERVER
 	enum MensagemTipo tipo;
 	TJogador jogador;
 } TMensagem;
 
-
+//Declaração do tamanho a ser reservado 20KB
+const int SIZE  = 20480;
 
 //Declarações das funções
 ssize_t get_msg_buffer_size(mqd_t queue);
@@ -40,13 +61,12 @@ int main(void) {
 	mqd_t queueServer;
 	mqd_t queueJogador1;
 	mqd_t queueJogador2;
-	float pesoTotal = 0;
-	float valorTotal = 0;
 	//Declaração do buffer
 	char* buffer = NULL;
 	//Declaração do tamanho do buffer
 	ssize_t tam_buffer;
 	ssize_t nbytes;
+	int count;
 
 	//Obter descritor (mq_open+O_RDONLY)
 	queueServer = mq_open(NOME_FILA_SERVER, O_RDONLY);
@@ -54,7 +74,29 @@ int main(void) {
 		perror("mq_open");
 		exit(2);
 	}
-	
+
+	//Criação da SHMEM
+	int shfd = shm_open(CHAVE_SALA, O_RDWR | O_CREAT , 0770);
+
+	//Validação de callback da criação da SHMEM
+	if (shfd < 0) { perror("shm_open"); exit(1); }
+
+	//Print do descritor da SHMEM
+	printf("Descritor shfd =  %d\n", shfd);
+
+	//Reserva da espaço para a SHMEM
+	if (ftruncate(shfd, SIZE) != 0) { perror("ftruncate"); exit(1); }
+
+	//Mapeamento da memória e link com o espaço de edereçamento do processo
+	void* salaSHFD = mmap(NULL, SIZE, PROT_WRITE, MAP_SHARED, shfd, 0);
+
+	//Validação de callback do mapeamento
+	if (salaSHFD == (void*) -1) { perror("mmap"); exit(1); }
+
+	//Declaração e endereçamento do ponteiro da área comum
+	TSala* sala = (TSala*) salaSHFD;
+	sala->status = VAZIA;
+
 	while(1){
 		//Alocar buffer para receber msg
 		tam_buffer = get_msg_buffer_size(queueServer);
@@ -72,7 +114,12 @@ int main(void) {
 		TMensagem* mensagem = (TMensagem*) buffer;
 
 		if(mensagem->tipo == ENTRAR) {
-			
+			int jogadorID = ++count;
+			if(jogadorID < 3) {
+
+			} else {
+				--count;
+			}
 		}
 	
 		//mq_close(queue);

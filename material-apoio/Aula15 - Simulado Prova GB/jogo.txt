@@ -1,0 +1,4 @@
+Gremio;Inter;Palmeiras;Santos;
+Bahia;Parana;Bahia;Cruzeiro;
+Cruzeiro;Inter;Gremio;Santos;
+Fluminense;Parana;Palmeiras;Fluminense;

@@ -8,7 +8,7 @@ void decifrar(char* palavradecifrar){
 
 	printf("Palavra decifrada: ");	
 	for(int i=0;i<tam-2;i++){
-		printf("%c", palavradecifrar[j]+3);	
+		printf("%c", palavradecifrar[i]+3);	
 	}
 	
 }

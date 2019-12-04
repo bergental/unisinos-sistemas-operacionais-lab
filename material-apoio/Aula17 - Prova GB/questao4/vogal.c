@@ -13,7 +13,7 @@ void gravararquivo(char* palavragravar){
 		exit(EXIT_FAILURE);
 	}
 
-	if (write(fd, palavragravarr, 1) != 5) perror("Erro na escrita do arquivo!");
+	if (write(fd, palavragravar, 1) != 5) perror("Erro na escrita do arquivo!");
 
 	printf("Arquivo criado e gravado!\n");
 
